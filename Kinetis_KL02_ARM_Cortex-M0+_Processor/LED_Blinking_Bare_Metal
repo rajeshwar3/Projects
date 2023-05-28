@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include "board.h"
+#include "peripherals.h"
+#include "pin_mux.h"
+#include "clock_config.h"
+#include "MKL02Z4.h"
+#include "fsl_debug_console.h"
+/* TODO: insert other include files here. */
+
+/* TODO: insert other definitions and declarations here. */
+typedef struct {
+	uint32_t PCR[32];
+}PORTRegs_t;
+
+#define PORT_B ((PORTRegs_t *)0x4004A000)
+
+typedef struct {
+	uint32_t PDOR;
+	uint32_t PSOR;
+	uint32_t PCOR;
+	uint32_t PTOR;
+	uint32_t PDIR;
+	uint32_t PDDR;
+}GPIORegs_t;
+
+#define GPIO_B ((GPIORegs_t *)0x400FF040)
+
+/*
+ * @brief   Application entry point.
+ */
+int main(void) {
+	/* Clock enable for PORTB */
+	SIM->SCGC5 = (1 << 10);
+
+	/* PORTB Pin 18 as GPIO */
+	PORT_B->PCR[6] = (1 << 8);
+
+	/* GPIOB Pin 18 as Output */
+	GPIO_B->PDDR = (1 << 6);
+
+	/* GPIO Data Output Register GPIOB PIN 18 to High*/
+	GPIO_B->PDOR = GPIO_B->PDOR | (1 << 6);
+
+	/* GPIOB Pin 18 to Low */
+	GPIO_B->PDOR = GPIO_B->PDOR & (~(1 << 6));
+
+	/* GPIO Set Output Register */
+	GPIO_B->PSOR = (1 << 6);
+
+	/* GPIO Clear Output Register */
+	GPIO_B->PCOR = (1 << 6);
+
+	/* GPIO Toggle Output Register */
+	GPIO_B->PTOR = (1 << 6);
+
+	/* GPIO Toggle Output Register */
+	GPIO_B->PTOR = (1 << 6);
+
+    return 0 ;
+}
