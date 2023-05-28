@@ -1,0 +1,163 @@
+body {
+    background-color: rgb(238, 237, 173);
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+
+}
+
+.navbar-btn {
+    height: 35px;
+    width: 80px;
+    background-color: rgb(223, 219, 7);
+    border-radius: 20px;
+    border: none;
+}
+
+.navbar-btn:hover {
+    background-color: rgb(189, 202, 3);
+    cursor: pointer;
+}
+
+.navbar-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.home-img {
+    border-radius: 200%;
+}
+
+.home-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#home-name {
+    font-size: 50px;
+}
+
+#nav-link {
+    text-decoration: none;
+}
+
+.about {
+    padding: 30px;
+}
+
+.about-me {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.projects {
+    padding: 30px;
+}
+
+.projects-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 50px;
+
+}
+
+.project-text {
+    height: 40px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-twitter {
+    background: rgb(223, 219, 7);
+    color: white;
+}
+
+
+.fa-linkedin {
+    background: rgb(223, 219, 7);
+    color: white;
+}
+
+
+
+.fa-instagram {
+    background: rgb(223, 219, 7);
+    color: white;
+}
+
+.fa-github {
+    background: rgb(223, 219, 7);
+    color: white;
+}
+
+.rights {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.footer {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 320px)  and (max-width: 480px) {
+    .home {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .home-img {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .home-about {
+        height: 100vh;
+        
+    }
+}

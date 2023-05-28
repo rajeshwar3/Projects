@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+<body style="background-color:lightgray;">
+<h1 style="text-align:center;">TEMPERATURE CONVERTER</h1>
+<form>
+    <label for="degree">Degree:</label>
+    <input type="number" id="degree" name="degree">
+    </form>   
+    <form>
+        Type:
+        <select id="type" onchange="optionSelected()">
+          <option>Celsius</option>
+          <option>Fahrenheit</option> 
+        </select>
+      <p>Result: <input type="text" id="result" size="20"></p>
+      </form>
+    <button onclick="converter()">
+        Convert
+    </button>
+    <button onclick="reset()">
+        Reset
+    </button>
+    <script>
+        const inputVal=document.getElementById("degree");
+        const outputVal=document.getElementById("result");
+        var input="Celsius";
+        function optionSelected() {
+          var type = document.getElementById("type");
+          input = type.options[type.selectedIndex].text;
+        }
+        function converter(){
+            if(input=="Celsius"){
+                document.getElementById("result").value= ((degree.value*(9/5))+32)+"° F";
+            }
+            else{
+                document.getElementById("result").value= ((degree.value-32)*(5/9))+"° C" ;
+            }
+        }
+        function reset(){
+            inputVal.value="";
+            outputVal.value="";
+        }
+        </script>
+  </form>
+</body>
+</html>
