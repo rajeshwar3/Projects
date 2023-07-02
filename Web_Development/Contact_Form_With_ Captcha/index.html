@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1
+        style="font-size:50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:rgb(240, 240, 243);">
+        CONTACT FORM</h1>
+    <div class="contact-form">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Your Name" id="name">
+        <br>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="mail">
+        <br>
+        <label for="subject"><b>Subject</b></label>
+        <input type="text" placeholder="Subject" id="subject">
+        <br>
+        <label><b>Message</b></label>
+        <textarea id="message" rows="7" cols="89" class="form-control messageStyle" placeholder="Message"></textarea>
+        <br>
+        <div id="captchaBackground">
+            <canvas id="captcha">captcha text</canvas>
+            <input id="textBox" type="text" name="text">
+            <div id="buttons">
+                <input id="submitButton" type="submit">
+                <button id="refreshButton" type="submit">Refresh</button>
+            </div>
+            <span id="output"></span>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
