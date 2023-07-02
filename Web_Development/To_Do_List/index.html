@@ -1,0 +1,26 @@
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>To Do List</title>
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+   <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+   <div class="page">
+      <h1
+         style="font-size:50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:rgb(240, 240, 243);">
+         Stop Wishing Start Doing</h1>
+      <div class="todo-form">
+         <form>
+            <input type="text" placeholder="Task to be done..." class="task" id="todoInput" />
+            <button id="add-btn" type="submit" class="addBtn" onclick="addtoList(event)">ADD</button>
+         </form>
+         <ul id="my-list"></ul>
+      </div>
+   </div>
+   <script src="./index.js"></script>
+</body>
+
+</html>
