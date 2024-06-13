@@ -1,0 +1,117 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Warden</title>
+    <link rel="icon" type="image/x-icon" href="images/app_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <div class="home">
+        <img src="/images/app_icon.png" alt="logo">
+        <div>
+            <a id="nav-link" href="#"><button class="navbar-btn">Home</button></a>
+            <a id="nav-link" href="#descriptions-section"><button class="navbar-btn">Desciptions</button></a>
+            <a id="nav-link" href="#screenshots-section"><button class="navbar-btn">Screenshots</button></a>
+            <a id="nav-link" href="#developers-section"><button class="navbar-btn">Developer</button></a>
+        </div>
+        <div class="toggle">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <i class="fa fa-moon-o" style="font-size: 15px; margin-left: -7px;"></i>
+                <i class="fa fa-sun-o" style="font-size: 15px; margin-left: -15px;"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+    </div>
+    <div class="home-headings">
+        <h1 class="heading">Note Warden</h1>
+        <br>
+        <h1 class="oneliner">An app For gathering Notes</h1>
+        <br>
+        <h4 class="available">AVAILABLE ON</h4>
+        <div class="available-on">
+            <button class="github" id="button1" onclick=" window.open('https://github.com/Saffron-codes/note_warden/releases/download/v1.2.0/Note-Warden-1.2.0.apk')"><a>Android</a><i class="fa fa-android" style="margin-bottom: 45px;"></i></button>
+            <button class="github" id="button2" onclick=" window.open('https://github.com/Saffron-codes/note_warden/releases/download/win-v1.0.0/notewarden-v1.0.0.exe')"><a>Windows</a><i class="fa fa-windows" style="margin-bottom: 45px;"></i></button>
+        </div>
+        <br>
+        <p>NUMBER OF DOWNLOADS: <span id="totalCount">0</span></p>
+    </div>
+    <div id="descriptions-section">
+        <div class="grid-container">
+
+            <div class="grid-item">
+                <br>
+                <img src="/images/Share.png" alt="logo" width="100" height="100">
+                <br>
+                <h1 class="descriptions-headings">Easily passed on to collections</h1>
+
+            </div>
+            <div class="grid-item">
+                <br>
+                <img src="/images/All_Documents.png" alt="logo" width="100" height="100">
+                <br>
+                <h1 class="descriptions-headings">Capable of handling any file type</h1>
+
+            </div>
+            <div class="grid-item">
+                <br>
+                <img src="/images/No_wifi.png" alt="logo" width="100" height="90">
+                <br>
+                <br>
+                <h1 class="descriptions-headings">Accessible offline</h1>
+
+            </div>
+            <div class="grid-item">
+                <img src="/images/Search.png" alt="logo" width="200" height="150">
+                <br>
+                <h1 class="descriptions-headings">Quick and easy search in collections</h1>
+
+            </div>
+        </div>
+    </div>
+    <div class="Screenshots" id="screenshots-section">
+        <h1 class="heading">Screenshots</h1>
+        <div class="Screenshots-images">
+            <img src="/images/Screenshot1.png" alt="logo" width="250" height="500">
+            <img src="/images/Screenshot2.png" alt="logo" width="250" height="500">
+            <img src="/images/Screenshot3.png" alt="logo" width="250" height="500">
+        </div>
+    </div>
+    <br>
+    <div id="developers-section"></div>
+    <h1 class="heading" style="text-align:center">Developers</h1>
+    <div class="features-container">
+
+        <div class="feature">
+            <br>
+            <img src="/images/Saffron.png" alt="logo" height="200">
+            <h2 style="color: rgb(227, 236, 233); ">Saffron Dionysius</h2>
+            <h5 style="color: rgb(196, 226, 216);margin-top: -5px;">App Developer</h5>
+            <div class="footer">
+                <a href="mailto:saffrondionysius@gmail.com" class="fa fa-envelope"></a>
+                <a href="https://www.linkedin.com/in/saffrondionysiust/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/saffron_dionysius/" class="fa fa-instagram"></a>
+                <a href="https://github.com/Saffron-codes" class="fa fa-github" style="font-size: 15px;"></a>
+
+            </div>
+        </div>
+        <div class="feature">
+            <br>
+            <img src="/images/Rajeshwar.png" alt="logo" height="200">
+            <h2 style="color: rgb(227, 236, 233); ">Rajeshwar N</h2>
+            <h5 style="color: rgb(196, 226, 216); margin-top: -5px;">Web Developer</h5>
+            <div class="footer">
+                <a href="mailto:rajeshwarnithi@gmail.com" class="fa fa-envelope"></a>
+                <a href="https://www.linkedin.com/in/rajeshwar-n-778506253/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/rocksta_rajesh/" class="fa fa-instagram"></a>
+                <a href="https://github.com/rajeshwar3" class="fa fa-github" style="font-size: 15px;"></a>
+            </div>
+        </div>
+    </div>
+    <h4 class="madewith">Made with 💖 by Rajeshwar</h4>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+ * {
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: "Montserrat", sans-serif;
+     background-color: #fff;
+     margin-top: 120px;
+
+ }
+
+ body.dark {
+     background-color: #292c35;
+ }
+
+
+ body.dark h1,
+ body.dark .support a {
+     color: #fff;
+ }
+
+ .checkbox {
+     opacity: 0;
+     position: absolute;
+ }
+
+ .checkbox-label {
+     background-color: #000000;
+     width: 50px;
+     height: 26px;
+     border-radius: 50px;
+     position: relative;
+     padding: 5px;
+     cursor: pointer;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .fa-moon-o {
+     color: #f1c40f;
+ }
+
+ .fa-sun-o {
+     color: #f39c12;
+ }
+
+ .checkbox-label .ball {
+     background-color: #fff;
+     width: 22px;
+     height: 22px;
+     position: absolute;
+     left: 2px;
+     top: 2px;
+     border-radius: 50%;
+     transition: transform 0.2s linear;
+ }
+
+ .checkbox:checked+.checkbox-label .ball {
+     transform: translateX(24px);
+ }
+
+ .support {
+     position: absolute;
+     right: 20px;
+     bottom: 20px;
+ }
+
+ .support a {
+     color: #292c35;
+     font-size: 32px;
+     backface-visibility: hidden;
+     display: inline-block;
+     transition: transform 0.2s ease;
+ }
+
+ .support a:hover {
+     transform: scale(1.1);
+ }
+
+ .toggle {
+     position: relative;
+     right: 20px;
+ }
+
+ .home {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-direction: row;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     backdrop-filter: blur(5px);
+ }
+
+ .home img {
+     height: 50px;
+     border-radius: 10px;
+     margin-top: 15px;
+     margin-left: 20px;
+
+ }
+
+ .heading {
+     background: linear-gradient(to left,
+             #000875, rgba(79, 204, 221, 0.815), rgb(0, 110, 255), rgb(0, 238, 255), rgb(3, 40, 119));
+     -webkit-background-clip: text;
+     color: transparent;
+     font-size: 90px;
+     margin-top: 20px;
+ }
+
+ .oneliner {
+     font-size: 30px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     text-shadow: 2px 2px 8px #a6f5ea;
+
+ }
+
+ .home-headings {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     margin-top: 40px;
+ }
+
+ .github {
+     font-size: 40px;
+     height: 100px;
+     width: 300px;
+     margin-top: 100px;
+     color: rgba(94, 255, 228, 0.685);
+     background-color: #454748;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 10px;
+     margin-left: 20px;
+     box-shadow: 0 0 10px #c5faff
+ }
+
+ .available {
+     text-align: center;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size: 25px;
+     margin-top: 70px;
+     margin-bottom: -40px;
+     color: #4fa4b7;
+ }
+
+ .available-on {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .navbar-btn {
+     height: 35px;
+     width: 100px;
+     background-color: rgb(83, 244, 255);
+     border-radius: 20px;
+     margin-left: 8px;
+     border: none;
+     box-shadow: 0 0 10px #b8f7fc
+ }
+
+ .navbar-btn:hover {
+     background-color: rgb(1, 148, 206);
+     cursor: pointer;
+ }
+
+ .grid-container {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     grid-gap: 10px;
+     margin-top: 50px;
+
+ }
+
+ .grid-item {
+     background-color: rgba(105, 212, 245, 0.8);
+     padding: -5px;
+     font-size: 30px;
+     text-align: center;
+     margin-top: 50px;
+     border-radius: 10px;
+
+ }
+
+ .screenshots {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     margin-top: 50px;
+ }
+
+ .Screenshots-images {
+     margin-top: 20px;
+ }
+
+ .descriptions-headings {
+     font-size: 40px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+
+ .features-container {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     margin-top: 20px;
+     margin-bottom: 80px;
+ }
+
+ .feature {
+     height: 350px;
+     width: 300px;
+     background-color: #313131;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin-top: 20px;
+     box-shadow: 0 0 10px #c1fdf8
+ }
+
+ .fa {
+     padding: 10px;
+     font-size: 55px;
+     width: 50px;
+     height: 30px;
+     text-align: center;
+     text-decoration: none;
+     margin: 5px 2px;
+
+ }
+
+ .fa:hover {
+     opacity: 0.7;
+ }
+
+
+ .fa-envelope {
+     color: white;
+     font-size: 15px;
+ }
+
+
+ .fa-linkedin {
+     color: white;
+     font-size: 15px;
+ }
+
+ .fa-instagram {
+     color: white;
+     font-size: 15px;
+ }
+
+ .fa-github {
+     color: white;
+ }
+
+ .footer {
+     display: flex;
+     width: 50%;
+     margin: auto;
+     flex-direction: row;
+     justify-content: center;
+     margin-top: -15px;
+ }
+
+ a:hover {
+     color: #9febdf;
+ }
+
+ .madewith {
+     text-align: center;
+     color: #28c6e2;
+     margin-top: -10px;
+ }
+
+ p {
+     font-size: 15px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     color: #1b92aa;
+ }
+
+ @media (min-width: 320px) and (max-width: 480px) {
+     .navbar-btn {
+         height: 35px;
+         width: 55px;
+         font-size: 8px;
+         padding: auto;
+     }
+
+     .grid-container {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 330px;
+         padding: auto;
+         margin-left: 25px;
+     }
+
+     .features-container {
+         flex-direction: column;
+     }
+
+     .heading {
+         font-size: 50px;
+     }
+
+     .home img {
+         height: 35px;
+         margin-top: 10px;
+         margin-left: 5px;
+     }
+
+     .toggle {
+         position: relative;
+         right: 10px;
+     }
+
+     .screenshots {
+         margin-left: 40px;
+     }
+
+     .available-on {
+         flex-direction: column;
+     }
+ }
